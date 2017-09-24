@@ -41,7 +41,7 @@ class Hashmap:
 
         for i, (k, v) in enumerate(bucket):
             if k == key:
-                output = bucket.pop(i)
+                output = bucket.pop(i)[1]
                 self.items -= 1
 
         return output
