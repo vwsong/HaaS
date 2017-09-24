@@ -169,7 +169,7 @@ Hashmaps as a service. We've implemented our own (fixed-size) hashmap in Python 
   }
   ```
   **Error Responses:**
-	```
+     ```
 	{
 		"Code" : 400
 		"Message": "Invalid parameters."
@@ -178,14 +178,14 @@ Hashmaps as a service. We've implemented our own (fixed-size) hashmap in Python 
      ```
 	{
 		"Code" : 400
-        	"Message": "Key doesn't exist."
+		"Message": "Key doesn't exist."
      	}
      ```
 
   **Success Responses:**
 	```
-     {
-	"Code" : 200
-        "value": "song"
-     }
+	{
+		"Code" : 200
+        	"value": "song"
+     	}
      ```
