@@ -16,78 +16,78 @@ Hashmaps as a service. We've implemented our own (fixed-size) hashmap in Python 
   
   **DATA PARAMS:** 
 	
-  ``` 
-  BODY = {
-    "id": "unique_id_of_new_hashmap",
-    "size": "fixed_size_of_hashmap_as_integer"
-  }
-  ```
+``` 
+BODY = {
+	"id": "unique_id_of_new_hashmap",
+	"size": "fixed_size_of_hashmap_as_integer"
+}
+```
   
   i.e.
-  ``` 
-  BODY = {
-    "id": "12",
-    "size": "200"
-  }
-  ```
+``` 
+BODY = {
+	"id": "12",
+	"size": "200"
+}
+```
   **Error Responses:**
-	```
-	 {
-		"Code" : 400
-        	"Message": "Database `id` already set!"
-    	 }
-     ```
-     ```
-	{
-		"Code" : 400
-		"Message": "Failure - hashmap is full."
-	}
-     ```
+```
+ {
+	"Code" : 400
+	"Message": "Database `id` already set!"
+ }
+```
+```
+{
+	"Code" : 400
+	"Message": "Failure - hashmap is full."
+}
+```
 
   **Success Responses:**
-	```
-	{
-		"Code" : 200
-        	"Message": "Success - data set!	"
-     	}
-     ```
+```
+{
+	"Code" : 200
+	"Message": "Success - data set!	"
+}
+```
 * **URL:** \set
 
   **Method:** POST
   
   **DATA PARAMS:** 
 	
-  ``` 
-  BODY = {
-    "id": "unique_id_of_new_hashmap",
-    "key": "key",
-    "value": "value"
-  }
-  ```
+``` 
+BODY = {
+	"id": "unique_id_of_new_hashmap",
+	"key": "key",
+	"value": "value"
+}
+```
   
   i.e.
-  ``` 
-  BODY = {
-    "id": "12",
-    "key": "vincent",
-    "value": "song"
-  }
-  ```
+``` 
+BODY = {
+	"id": "12",
+	"key": "vincent",
+	"value": "song"
+}
+```
   **Error Responses:**
-	```
-	{
-		"Code" : 400
-        	"Message": "Database `id` doesn't exist!"
-	}
-     ```
+```
+{
+	"Code" : 400
+	"Message": "Database `id` doesn't exist!"
+}
+```
 
   **Success Responses:**
-	```
-	{
-		"Code" : 200
-        	"Message": "Success - data set!	"
-	}
-     ```
+```
+{
+	"Code" : 200
+	"Message": "Success - data set!	"
+}
+```
 * **URL:** \get
 
   **Method:** GET
@@ -105,20 +105,20 @@ Hashmaps as a service. We've implemented our own (fixed-size) hashmap in Python 
   key="vincent"
   ```
   **Error Responses:**
-	```
-	{
-		"Code" : 400
-		"Message": "Database `id` doesn't exist!"
-	}
-     ```
+```
+{
+	"Code" : 400
+	"Message": "Database `id` doesn't exist!"
+}
+```
 
   **Success Responses:**
-	```
-	 {
-		"Code" : "200",
-		"Value" : value
-	 }
-     ```
+```
+ {
+	"Code" : "200",
+	"Value" : value
+ }
+```
 * **URL:** /load
 
   **Method:** GET
@@ -134,58 +134,58 @@ Hashmaps as a service. We've implemented our own (fixed-size) hashmap in Python 
   id="12"
   ```
   **Error Responses:**
-	```
-	{
-		"Code" : 400
-        	"Message": "Database `id` doesn't exist!"
-     	}
-     ```
+```
+{
+	"Code" : 400
+	"Message": "Database `id` doesn't exist!"
+}
+```
 
   **Success Responses:**
-	```
-	 {
-		"Code" : "200",
-		"Value" : value
-	 }
-     ```
+```
+ {
+	"Code" : "200",
+	"Value" : value
+ }
+```
 * **URL:** \delete
 
   **Method:** POST
   
   **DATA PARAMS:** 
 	
-  ``` 
-  BODY = {
-  	"id": "unique_id_of_new_hashmap",
-    	"key": "key"
-  }
-  ```
+``` 
+BODY = {
+	"id": "unique_id_of_new_hashmap",
+	"key": "key"
+}
+```
   
   i.e.
-  ``` 
-  BODY = {
-  	"id": "12",
-    	"key": "vincent"
-  }
-  ```
+``` 
+BODY = {
+	"id": "12",
+	"key": "vincent"
+}
+```
   **Error Responses:**
-     ```
-	{
-		"Code" : 400
-		"Message": "Invalid parameters."
-	}
-     ```
-     ```
-	{
-		"Code" : 400
-		"Message": "Key doesn't exist."
-     	}
-     ```
+```
+{
+	"Code" : 400
+	"Message": "Invalid parameters."
+}
+```
+```
+{
+	"Code" : 400
+	"Message": "Key doesn't exist."
+}
+```
 
   **Success Responses:**
-	```
-	{
-		"Code" : 200
-        	"value": "song"
-     	}
-     ```
+```
+{
+	"Code" : 200
+	"value": "song"
+}
+```
